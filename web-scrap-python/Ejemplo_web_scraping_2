@@ -1,0 +1,59 @@
+import requests
+from bs4 import BeautifulSoup
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+#URL de la tabla de provincias de España
+url='https://es.wikipedia.org/wiki/Provincia_(Espa%C3%B1a)'
+r=requests.get(url)
+soup=BeautifulSoup(r.text,'html.parser')
+tabla=soup.find('table',class_='wikitable')
+#todas las columnas de la tabla
+provincias=tabla.find_all('tr')
+#los datos estan en la primera celda de cada columna (la primera columna es de encabezado)
+print(provincias[1].td.prettify())
+print('')
+#lo ponemos de comentario para poder asumir lasprovincias buscando elobjeto 'tr'
+#provincias=tabla.find_all('a')
+#print(provincias[1].prettify())
+print('')
+
+#Enlaces de la tabla de provincias de España
+enlaces=[]
+for p in provincias:
+    if p.td:
+        refs=p.td.find_all('a')
+        for r in refs:
+            if r.has_attr('title'):
+                enlaces.append(r)
+
+for i in range(len(enlaces)):
+    print(enlaces[i])
+    
+#Usaremos para tener un mejor GUI
+print('')
+enlaces_df=pd.DataFrame({'provincia':[e.text for e in enlaces],'enlace':[e.get('href') for e in enlaces]})      
+print(enlaces_df)
+
+#Por ejemplo creamos la sopa para el primer enlace
+url='https://es.wikipedia.org'+enlaces[0].get('href')
+r=requests.get(url)
+soup=BeautifulSoup(r.text,'html.parser')
+#Vamos a extraer en una data frame la informacion geografica de la 
+#tabla de la barra lateral derecha (atributo de clase infobox)
+print('')
+tabla=soup.find('table',class_='infobox')
+dato,valor=[],[]
+for t in tabla.find_all('tr'):
+    if t.th:
+        if t.td:
+            dato.append(t.th.text)
+            #valor append(t.td.text) #aparecen caracteres especiales
+            #valor.append(t.td.text)
+            valor.append(' '.join([text for text in t.td.stripped_strings]))
+            
+
+datos=pd.DataFrame({'Dato':dato,'Valor':valor})
+print(datos)
+
