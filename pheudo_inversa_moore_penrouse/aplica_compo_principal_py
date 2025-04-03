@@ -1,0 +1,51 @@
+#Este es un ejemplo de la aplicacion de componentes pricipales
+#usando de dataset el dataset de iris
+#El dataset de iris es un dataset de clasificacion
+
+from sklearn import datasets
+iris=datasets.load_iris()
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA
+
+print('Aplicacion de Composicion Principal')
+print('-'*50)
+iris_shape=iris.data.shape
+print(f'Filas y Columnas {iris_shape}')
+print('-'*50)
+
+features_names=iris.get("feature_names")
+print(f'Nombres de las columnas {features_names}')
+print('-'*50)
+
+print(f'Primeras 5 filas de los datos \n{iris.data[:6]}')
+print('-'*50)
+
+pca=PCA(n_components=2)
+X=pca.fit_transform(iris.data)
+print(f'Filas y Columnas{X.shape}')
+print('-'*50)
+
+print(f'Primeras 6 filas de los datos \n{X[:6]}')
+print('-'*50)
+
+plt.scatter(X[:,0],X[:,1])
+plt.show()
+
+new_iris_shape=iris.target.shape
+print(f'Filas {new_iris_shape}')
+print('-'*50)
+
+print(f'Primeras 6 columnas de los datos: {iris.target[:6]}')
+print('-'*50)
+
+unique_elements,counts_elements=np.unique(iris.target,return_counts=True)
+unique_element=np.asarray((unique_elements,counts_elements))
+print(f'Elementos unicos y sus conteos: \n{unique_element}')
+print('-'*50)
+print(f'Elementos unicos: {iris.target_names}')
+print('-'*50)
+
+plt.scatter(X[:,0],X[:,1],c=iris.target)
+plt.show()
