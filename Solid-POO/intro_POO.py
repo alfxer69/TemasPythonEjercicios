@@ -43,3 +43,5 @@ print(f'El dia 1 es feriado? {Empleados.es_feriado(1)}')
 print(f'El dia 2 es feriado? {Empleados.es_feriado(2)}')
 
 print(f"El numero de empleados es {Empleados.numero_empleados}")
+
+
