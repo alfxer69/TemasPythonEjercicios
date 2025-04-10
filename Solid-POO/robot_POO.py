@@ -11,6 +11,7 @@ class Robot:
     def __init__(self):
         self.X=0
         self.Y=0
+        self.historial_movimientos=[]
         
     
     def mueve(self,orden):
@@ -28,12 +29,12 @@ class Robot:
     def posicion_actual(self):
         print(f'La posición es: {self.X} , {self.Y}')
 
-mi_robot=Robot()
-orden='A'
-while orden!='fin':
-    orden=input('Ingresar la orden al Robot: (A:adelante,R:retroceder,D:derecha,I:izquierda,fin:terminar) ')
-    mi_robot.mueve(orden)
-    mi_robot.posicion_actual()
+#mi_robot=Robot()
+#orden='A'
+#while orden!='fin':
+#    orden=input('Ingresar la orden al Robot: (A:adelante,R:retroceder,D:derecha,I:izquierda,fin:terminar) ')
+#    mi_robot.mueve(orden)
+#    mi_robot.posicion_actual()
         
         
 
