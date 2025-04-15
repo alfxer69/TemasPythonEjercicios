@@ -1,4 +1,5 @@
 #Mejora con responsabilidades de clase y alta cohesion.
+#Cada clase tiene una funcion especifica
 class Usuario:
     def __init__(self,nombre,email):
         self.email=email
