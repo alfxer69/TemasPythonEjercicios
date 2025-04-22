@@ -5,15 +5,15 @@ class Manejadorpedidos(ABC):
 
 class pedidoparallevar(Manejadorpedidos):
     def procesar_pedido(self,detalles):
-        print(f'Procesando pedido para llevar {detalles}')
+        print(f'Procesando pedido para llevar: {detalles}')
 
 class pedidolocal(Manejadorpedidos):
     def procesar_pedido(self,detalles):
-        print(f'Procesando pedido local {detalles}')
+        print(f'Procesando pedido local: {detalles}')
 
 class pedidodelivery(Manejadorpedidos):
     def procesar_pedido(self,detalles):
-        print(f'Procesando pedido delivery {detalles}')
+        print(f'Procesando pedido delivery: {detalles}')
 
 class Restaurante():
     def __init__(self,nombre)->None:
