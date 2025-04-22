@@ -60,12 +60,12 @@ def abrir():
         filetypes=[('Archivos de texto',"*.txt")],
         title='Abrir un archivo de texto')
     if directorio!='':
-        fichero=open(directorio,'r',encoding='utf-8')
-        contenido=fichero.read()
-        texto.delete(1.0,END)
-        texto.insert('insert',contenido)
-        fichero.close()
-        raiz.title(directorio+' - editor_texto')
+       fichero=open(directorio,'r',encoding='utf-8')
+       contenido=fichero.read()
+       texto.delete(1.0,END)
+       texto.insert('insert',contenido)
+       fichero.close()
+       raiz.title(directorio+' - editor_texto')
 
 #--------Guardar Archivo-----------------------
 def guardar():

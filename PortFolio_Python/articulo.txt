@@ -1,0 +1,21 @@
+El Internet de las Cosas (IoT) es una tendencia tecnológica prometedora de la que ya nos estamos beneficiando. Hace referencia a dispositivos, objetos y herramientas que se construyen con conectividad a internet a través de WiFi, lo que significa que se pueden conectar a la red y entre sí.
+
+Es decir, son dispositivos físicos equipados con una cámara inteligente o un sensor que les permite interactuar con el mundo real y recopilar información. Estos datos los transforman y almacenan en la nube u otros dispositivos inteligentes.
+
+Esta tendencia tecnológica todavía se encuentra en su etapa inicial. Se espera que para 2030 existan aproximadamente 50 mil millones de dispositivos IoT en todo el mundo.
+
+Además de usos caseros, como encender tu aire acondicionado antes de llegar a casa o cerrar cualquiera de las puertas de forma remota. si lo olvidas cuando sales a la calle. el IoT tiene la capacidad de aumentar la seguridad, eficiencia y toma de decisiones de las empresas. 
+
+El IoT puede acelerar la atención médica, permitir el mantenimiento predictivo, mejorar el servicio al cliente y ofrecer muchos otros beneficios a la hora de tomar decisiones en una empresa, como:
+
+Mejor uso de activos y recursos: el monitoreo y programación automatizadas. que se implementan con la ayuda de sensores interconectados permiten un uso más eficiente de los recursos. como el consumo de agua o una mejor administración de la energía.
+
+Reducción del error humano: reduce las probabilidades del error humano gracias a la automatización de procesos operativos y administrativos. como informes, actualizar aplicaciones, llevar a cabo mantenimiento preventivo y evaluar las estaciones de trabajo en busca de actualizaciones.
+
+Mejora el servicio al cliente: los dispositivos IoT recopilan datos específicos de tus clientes potenciales. que ayudan a comprender su comportamiento y expectativas.
+
+Aunque la Inteligencia Artificial una disciplina que intenta desarrollar y replicar inteligencia por medio de ordenadores y procesos informáticos. ha recibido mucha atención en la última década. sigue siendo una de las nuevas tendencias tecnológicas. que hay que tener en cuenta porque apenas se encuentra en sus primeras etapas.
+
+La IA es conocida por la gran variedad de aplicaciones y usos que puede tener. como su superioridad en el reconocimiento de imagen y voz. en los asistentes personales de teléfonos inteligentes. en las aplicaciones de navegación así como para analizar las interacciones. Detecta patrones cambiantes en el comportamiento de los clientes potenciales y actuales mediante el análisis rápido de grandes cantidades de datos. 
+
+Se espera que el mercado de IA crezca hasta convertirse en una industria de 190 mil millones de dólares para 2025.

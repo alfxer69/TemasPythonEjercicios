@@ -1,0 +1,55 @@
+Tómese un fotón, un único fotón. Necesitamos, para empezar, construir un entorno
+capaz de emitir esta partícula de luz de una en una. Esto puede conseguirse en un
+“pozo cuántico” para electrones, a partir del cual emitamos un fotón individual. 
+Y ese pozo es un punto cuántico semiconductor.
+
+El pozo está formado por 10 000 átomos de materiales tales como indio, galio y 
+arsénico. Los átomos forman una “lenteja” nanométrica. Su diámetro: unos 50 nm 
+y una altura de unos 7 nm.
+
+Dentro del “pozo cuántico” los electrones están obligados a ocupar ciertos niveles
+de energía, como ocurre con un electrón orbitando en torno a un átomo. 
+Estos estados electrónicos dentro del punto cuántico podemos excitarlos aplicando
+un haz láser. Aunque lo interesante ocurre cuando un electrón se desexcita entre
+dos niveles del pozo. Es entonces cuando el electrón emite un solo fotón. 
+¡Lo tenemos!
+
+
+Armando y Max con la antorcha cuántica en el campus de JKU - Johannes Kepler 
+Universität Linz. QuanTour, CC BY
+De este modo hemos creado una antorcha cuántica, una nueva tecnología que
+nos permite usar fotones individuales para llevar la comunicación y la computación
+al régimen cuántico, con propiedades y utilidades únicas.
+
+Una antorcha eficiente
+Para que la fuente de fotones funcione eficientemente, hemos acoplado al pozo
+cuántico un resonador fotónico: una trampa para atrapar fotones durante un
+tiempo ultracorto en un espacio comparable a la longitud de onda del fotón.
+
+Esta trampa fotónica mejora las propiedades de emisión del punto cuántico. 
+Así, la emisión espontánea es más rápida y en una dirección de emisión que 
+podemos controlar.
+
+El resonador tiene forma de rejilla circular, similar a una diana de dardos, 
+donde las distancias entre las rejillas circulares son de unos 100 nm, con 
+espesor y altura en torno a 100-200 nm.
+
+En el laboratorio, la fuente se enfría en un criostato hasta unos escalofriantes 
+7 grados por encima del cero absoluto (−273.15 °C), lo que equivale a unos
+-266 °C. Es casi lo más frío que se puede estar.
+
+
+En el laboratorio de Linz. A la espera de si produce los fotones individuales. 
+QuanTour, CC BY
+
+El punto cuántico está localizado en el centro de esta diana, y hace que todos
+los fotones individuales se emitan mucho más rápidamente, con propiedades
+óptimas para su posterior uso en posibles aplicaciones cuánticas.
+
+La medición de estos fotones individuales emitidos por la antorcha cuántica
+es un símbolo en esta actividad de divulgación. No obstante, las fuentes de
+fotones individuales se adivinan ya como una útil revolución tecnológica.
+
+La nueva encriptación
+Mantenernos a salvo en la vida virtual es un desafío cada vez más complejo.
+

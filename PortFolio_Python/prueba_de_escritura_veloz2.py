@@ -38,7 +38,6 @@ def fun_coincidencia():
     oracion_limpia=re.sub(r'[^\w\s]', '', oracion)
     lista_palabras=oracion_limpia.split(' ')
     num_lista_palabras=len(lista_palabras)
-    
     #limpiamos el texto  ingresado
     conten_limpio=re.sub(r'[^\w\s]', '', conten)
     conten_lista=conten_limpio.split(' ')
