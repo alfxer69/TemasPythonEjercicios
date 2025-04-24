@@ -48,7 +48,7 @@ class Trabajo:
     
     def profesional_action(self):
         for profesional in self.profesionales:
-            print(profesional.action())
+            print(f'{profesional.action()} con sueldo de {profesional.sueldo_prom}')
 
 trabajo=Trabajo()
 profesional1=Profesional('Ingeniero Industrial',2500,industrialengineer())
