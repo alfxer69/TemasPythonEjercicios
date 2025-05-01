@@ -1,4 +1,5 @@
 import pennylane as qml
+import torch
 from torch import optim
 
 # Definir un circuito cuántico
