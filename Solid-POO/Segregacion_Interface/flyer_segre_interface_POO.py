@@ -31,4 +31,22 @@ class Drone:
     """Clase que representa a un drone"""
     def __init__(self,name:str)->None:
         self.name=name
-    def fliy(self)->None:
+    def fly(self)->None:
+        print(f'{self.name} esta volando!')
+
+def process_fliyer(fliyer:Flyer)->None:
+    """Funcion generica que acepta que cualquier objeto que cumpla con el protocolo flyer"""
+    fliyer.fly()
+
+bird=Bird('Condor')
+process_fliyer(bird)
+
+drone=Drone('DJI')
+process_fliyer(drone)
+
+airplane=Airplane('Boeing 747')
+process_fliyer(airplane)
+
+helicopter=Helicopter('Apache')
+process_fliyer(helicopter)
+
