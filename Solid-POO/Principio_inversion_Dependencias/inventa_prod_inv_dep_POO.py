@@ -16,7 +16,7 @@ class AlmacenamientoProductos(ABC):
 
 #implementacion del servicio de almacenamiento de productos en un inventario
 #METODO DE BAJO NIVEL --> detallado
-class MemoriaAlmacenamientoProductos(AlmacenamientoProductos):
+class MemoriaAlmacenamientoProductos(AlmacenamientoProductos):#inversion de dependencias
     def __init__(self):
         self.inventario = {}
     
@@ -42,7 +42,7 @@ class MemoriaAlmacenamientoProductos(AlmacenamientoProductos):
 #METODO DE ALTO NIVEL --- logica de negocios
 
 class GestorProductos:
-    def __init__(self,almacenamiento:AlmacenamientoProductos):
+    def set_almacenamiento(self,almacenamiento:AlmacenamientoProductos):
         self.almacenamiento=almacenamiento
     
     def agregar_producto(self,nombre:str,cantidad:int):
@@ -60,7 +60,8 @@ class GestorProductos:
         
 #Ejemplo de uso
 memoriaproductos=MemoriaAlmacenamientoProductos()
-gestor=GestorProductos(memoriaproductos)
+gestor=GestorProductos()
+gestor.set_almacenamiento(memoriaproductos) #inyeccion de dependencias
 gestor.agregar_producto('Pantalones',15)
 print('----')
 gestor.agregar_producto('Camisas',10)
