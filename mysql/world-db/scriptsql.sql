@@ -6,3 +6,27 @@ select Name from country limit 5;
 
 select Name,Population from country
 where Continent='Asia' and Population>=10000000;
+
+select Name, Population from city
+order by CountryCode asc, Population desc;
+
+select Name, IndepYear from country
+where IndepYear between 1900 and 2000;
+
+select Name as 'Nombre del Pais', (Population/10000000) 
+as 'Poblacion (millones)' from country;
+
+select Name, (GNP/Population) as 'GNP per capita' from country
+where Population>0;
+
+select Name from city where Name like 'New%';
+
+select Name from country where IndepYear is null;
+
+select Name from city where CountryCode in 
+(select Code from country where Continent='Europe');
+
+
+
+
+
