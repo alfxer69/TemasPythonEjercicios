@@ -78,6 +78,23 @@ from film
 group by rating
 order by total_peliculas desc;
 
+select 
+	special_features,
+    group_concat(
+		distinct rating
+        separator '|') as rating_disponibles,
+        avg(replacement_cost) as costo_promedio
+from film
+group by special_features
+order by count(*) desc; 
+
+select
+	ifnull(rating,'Total') as rating,
+    ifnull(release_year,'subtotal') as año,
+    count(*) as total
+from film
+group by rating,release_year with rollup
+
 
 		
     

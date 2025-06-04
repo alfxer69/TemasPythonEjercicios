@@ -18,6 +18,108 @@ select rating,
     from film 
     group by rating,special_features
     order by rating,special_features desc;
+
+select
+	case
+		when replacement_cost<15 then 'bajo'
+        when replacement_cost between 15 and 20 then 'medio'
+        else 'alto'
+	end as segmento_costo,
+	count(*) as cantidad,
+    avg(rental_rate) as promedio_renta,
+    avg(length) as duracion
+    from film
+    group by segmento_costo
+    order by cantidad desc;
+
+select title,length from film where length>(
+select avg(length) from film 
+) 
+order by length desc;
+
+select rating,avg(rental_rate) as promedio,
+(select avg(rental_rate) from film) as tarifa_global,
+avg(rental_rate)-(select avg(rental_rate) from film) as diferencia from film
+group by rating
+order by diferencia desc;
+
+select rating,avg(replacement_cost) as prom_rental_rate,
+(select avg(replacement_cost) from film) as repla_cost_avg,
+avg(replacement_cost)-(select avg(replacement_cost) from film) as diferencia from film
+group by rating
+order by diferencia;
+
+select special_features,avg(length) as prom_total,
+(select avg(length) from film) as prom_lng_avg,
+avg(length)-(select avg(length) from film) as diferencia from film
+group by special_features
+order by diferencia;
+
+
+
+select special_features, avg(rental_rate) as Total_rental_rate,
+(select avg(rental_rate) from film) as prom_rental_rate,
+avg(rental_rate)-(select avg(rental_rate) from film) as diferencia from film
+group by special_features
+order by diferencia;
+
+select rating, avg(rental_duration) as duracion_renta,
+(select avg(rental_duration) from film) as prom_renta,
+avg(rental_duration)-(select avg(rental_duration) from film) as diferencia from film
+group by rating
+order by diferencia desc;
+
+select
+	rating,
+    substring_index(group_concat(
+    title separator '|'), '|',5) as muestra_titulos,
+    count(*) as total_peliculas
+from film
+group by rating
+order by total_peliculas desc;
+
+select 
+	special_features,
+    group_concat(
+		distinct rating
+        separator '|') as rating_disponibles,
+        avg(replacement_cost) as costo_promedio
+from film
+group by special_features
+order by count(*) desc; 
+
+select
+	rating,
+    substring_index(group_concat(distinct special_features
+				separator '|'),'|',5) as spec_disp,
+	avg(length) as duracion from film
+    group by  rating
+    order by duracion desc;
+
+select
+	ifnull(rating,'Total') as rating,
+    ifnull(release_year,'subtotal') as año,
+    count(*) as total
+from film
+group by rating,release_year with rollup;
+
+select
+	ifnull(rating,'total') as rating,
+	ifnull(special_features,'SubTotal') as  special_features,
+    
+    count(*) as total
+    from film 
+    group by rating,special_features with rollup;
+
+select 
+	ifnull(rating,'total') as rating,
+    ifnull(release_year,'SubTotal') as release_year,
+    count(*) as total from film
+    group by rating,release_year with rollup;
+
+
+
+		
     
     
     
